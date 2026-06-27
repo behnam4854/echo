@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="night_top">#0B1026</color>
+    <color name="night_bottom">#1B2A6B</color>
+    <color name="star_yellow">#FFD23F</color>
+    <color name="ic_background">#1B2A6B</color>
+</resources>
