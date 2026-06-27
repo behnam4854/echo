@@ -1,13 +1,15 @@
-# Star Catcher — «ستاره‌چین» 🌟
+# Orbit Defense — «مدافع سیاره» 🪐
 
-A friendly arcade catch-and-dodge game for Android, made for kids **ages 7–13**.
-The in-game language is **Persian (Farsi), fully right-to-left**, including
-Persian digits.
+A 360° tower-defense game for Android, made for kids **ages 7–13**. The in-game
+language is **Persian (Farsi), fully right-to-left**, including Persian digits.
 
-Slide the basket along the bottom of the screen with one finger. **Catch the
-falling stars and gems** to score, and **dodge the asteroids**. The longer you
-last, the faster things fall — easy to pick up for younger players, fast enough
-to challenge older ones.
+Defend a tiny planet at the centre of the screen. Slime-zombies drift in from
+**every direction**. **Spin the planet** by dragging it to re-aim all of your
+turrets at once, and **tap** empty space to build a new turret on the surface
+(it costs energy). Keep the planet's health above zero.
+
+Think *Plants vs. Zombies* meets *Super Mario Galaxy*'s round world — instead of
+flat lanes, the whole battlefield is a globe you rotate.
 
 ## Screenshots
 
@@ -19,29 +21,23 @@ to challenge older ones.
 > can't compile an APK in this environment, which has no Android SDK). They
 > mirror the exact colors, geometry, and Persian/RTL text the app draws.
 
-See **[ROADMAP.md](ROADMAP.md)** for the Agile, sprint-based development plan.
+## How it plays
 
-## Why this genre
+- **Drag the planet** → spins it, moving every turret around the globe.
+- **Tap empty space** → builds a turret on the surface facing that way (costs energy).
+- **Turrets auto-fire** at the nearest slime-zombie in range.
+- **Kills give energy**; energy builds more turrets.
+- A slime that reaches the planet damages it. **Planet health hits zero → game over.**
+- Waves get faster and tougher the longer you survive.
 
-For a 7–13 audience a single game has to work for very different players. An
-arcade catch-and-dodge game fits because it is:
+## Why this design fits ages 7–13
 
-- **Instantly learnable** — one-finger drag, no reading or tutorial needed.
-- **Self-scaling in difficulty** — speed and spawn rate ramp with your score, so
-  the same game stays gentle for a 7-year-old and tense for a 13-year-old.
-- **Short and replayable** — quick rounds with an immediate "tap to play again".
-- **Family-safe** — no violence, no text, no ads, no network access.
+- One-thumb controls (spin + tap) — a 7-year-old learns it in seconds.
+- Difficulty self-scales with waves — still tense for a 13-year-old.
+- Cute, non-violent slime enemies; no text-heavy menus, no ads, no network.
 
-## Gameplay
-
-| Item | Effect |
-| --- | --- |
-| ⭐ Star | +1 point |
-| 💎 Gem | +5 points (falls faster) |
-| ☄️ Asteroid | Costs a life if caught — dodge it! |
-
-You have 3 lives. Missing a star is harmless; only catching an asteroid hurts.
-Your best score is saved on the device.
+See **[DESIGN.md](DESIGN.md)** for the full game design and **[ROADMAP.md](ROADMAP.md)**
+for the Agile, sprint-based development plan.
 
 ## Tech
 
@@ -53,10 +49,10 @@ Your best score is saved on the device.
 ### Project layout
 
 ```
-app/src/main/java/com/kidsgames/starcatcher/
+app/src/main/java/com/kidsgames/orbitdefense/
   MainActivity.kt   # Activity host, keeps the screen on
-  GameView.kt       # Game loop, state machine, input, HUD, difficulty scaling
-  Entities.kt       # Basket, falling items, particles + their drawing
+  GameView.kt       # Game loop, spin/tap input, turrets, waves, HUD, difficulty
+  Entities.kt       # Planet, Defender, Enemy, Projectile, Particle + their drawing
 ```
 
 ## Building

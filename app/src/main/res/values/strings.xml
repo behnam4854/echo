@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ستاره‌چین</string>
-    <string name="game_title">ستاره‌چین</string>
+    <string name="app_name">مدافع سیاره</string>
+    <string name="game_title">مدافع سیاره</string>
+    <string name="how_to_spin">سیاره را بچرخان و ضربه بزن تا برج بسازی</string>
     <string name="tap_to_start">برای شروع ضربه بزن</string>
     <string name="tap_to_restart">برای بازی دوباره ضربه بزن</string>
-    <string name="game_over">بازی تمام شد</string>
-    <string name="ready_best">رکورد: %1$s</string>
-    <string name="over_summary">امتیاز: %1$s   رکورد: %2$s</string>
-    <string name="hud_score">امتیاز %1$s</string>
-    <string name="hud_level">مرحله %1$s</string>
+    <string name="game_over">سیاره سقوط کرد</string>
+    <string name="over_summary">نابودشده: %1$s   رکورد: %2$s</string>
+    <string name="hud_kills">نابودشده %1$s</string>
+    <string name="hud_wave">موج %1$s</string>
+    <string name="hud_energy">انرژی</string>
 </resources>

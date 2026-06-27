@@ -1,12 +1,12 @@
-package com.kidsgames.starcatcher
+package com.kidsgames.orbitdefense
 
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 
 /**
- * Single-activity host for the game. All gameplay lives in [GameView], which runs
- * its own render/update thread on a SurfaceView.
+ * Single-activity host for Orbit Defense. All gameplay lives in [GameView],
+ * which runs its own render/update thread on a SurfaceView.
  */
 class MainActivity : AppCompatActivity() {
 
@@ -14,7 +14,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Keep the screen on while kids are playing.
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         gameView = GameView(this)
         setContentView(gameView)

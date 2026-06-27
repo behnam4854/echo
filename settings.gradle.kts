@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "StarCatcher"
+rootProject.name = "OrbitDefense"
 include(":app")

@@ -3,7 +3,18 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
+    <!-- Planet body -->
     <path
-        android:fillColor="#FFD23F"
-        android:pathData="M54,30 L60.2,46.8 L78,47.6 L64.1,58.7 L68.7,76 L54,66.2 L39.3,76 L43.9,58.7 L30,47.6 L47.8,46.8 Z" />
+        android:fillColor="#3FB0A0"
+        android:pathData="M54,54 m-26,0 a26,26 0 1,0 52,0 a26,26 0 1,0 -52,0" />
+    <!-- Continent -->
+    <path
+        android:fillColor="#1F6B6E"
+        android:pathData="M42,46 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0" />
+    <!-- Orbit ring -->
+    <path
+        android:strokeColor="#FFD23F"
+        android:strokeWidth="3"
+        android:fillColor="#00000000"
+        android:pathData="M22,60 a32,16 -20 1,0 64,-12 a32,16 -20 1,0 -64,12" />
 </vector>

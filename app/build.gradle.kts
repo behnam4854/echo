@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.kidsgames.starcatcher"
+    namespace = "com.kidsgames.orbitdefense"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.kidsgames.starcatcher"
+        applicationId = "com.kidsgames.orbitdefense"
         minSdk = 21
         targetSdk = 34
         versionCode = 1
