@@ -52,6 +52,13 @@ class GameView(context: Context) : SurfaceView(context), SurfaceHolder.Callback,
 
     private val prefs = context.getSharedPreferences("starcatcher", Context.MODE_PRIVATE)
 
+    // Persian (Eastern Arabic) digits so all numbers render in Farsi too.
+    private val persianDigits = charArrayOf('۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹')
+
+    private fun fa(n: Int): String = buildString {
+        for (c in n.toString()) append(if (c in '0'..'9') persianDigits[c - '0'] else c)
+    }
+
     init {
         holder.addCallback(this)
         isFocusable = true
@@ -239,26 +246,39 @@ class GameView(context: Context) : SurfaceView(context), SurfaceHolder.Callback,
         for (p in particles) p.draw(canvas, paint)
 
         when (state) {
-            State.READY -> drawCenteredScreen(canvas, "Star Catcher", "Tap to play", "Best: $bestScore")
+            State.READY -> drawCenteredScreen(
+                canvas,
+                context.getString(R.string.game_title),
+                context.getString(R.string.tap_to_start),
+                context.getString(R.string.ready_best, fa(bestScore))
+            )
             State.PLAYING -> drawHud(canvas)
-            State.GAME_OVER -> drawCenteredScreen(canvas, "Game Over", "Score: $score   Best: $bestScore", "Tap to play again")
+            State.GAME_OVER -> drawCenteredScreen(
+                canvas,
+                context.getString(R.string.game_over),
+                context.getString(R.string.over_summary, fa(score), fa(bestScore)),
+                context.getString(R.string.tap_to_restart)
+            )
         }
     }
 
     private fun drawHud(canvas: Canvas) {
-        textPaint.textAlign = Paint.Align.LEFT
         textPaint.textSize = width * 0.06f
         textPaint.color = Color.WHITE
-        canvas.drawText("Score $score", width * 0.04f, height * 0.07f, textPaint)
 
+        // Persian reads right-to-left, so the score sits in the top-right corner
+        // and the level on the left.
         textPaint.textAlign = Paint.Align.RIGHT
-        canvas.drawText("Lv $level", width * 0.96f, height * 0.07f, textPaint)
+        canvas.drawText(context.getString(R.string.hud_score, fa(score)), width * 0.96f, height * 0.07f, textPaint)
 
-        // Lives as little hearts.
+        textPaint.textAlign = Paint.Align.LEFT
+        canvas.drawText(context.getString(R.string.hud_level, fa(level)), width * 0.04f, height * 0.07f, textPaint)
+
+        // Lives as little hearts, under the score on the right, filling leftward.
         paint.color = Color.parseColor("#FF6B6B")
         val hr = width * 0.025f
         for (i in 0 until lives) {
-            val hx = width * 0.04f + i * (hr * 2.6f) + hr
+            val hx = width * 0.96f - i * (hr * 2.6f) - hr
             val hy = height * 0.11f
             canvas.drawCircle(hx - hr * 0.45f, hy, hr * 0.6f, paint)
             canvas.drawCircle(hx + hr * 0.45f, hy, hr * 0.6f, paint)

@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Star Catcher</string>
+    <string name="app_name">ستاره‌چین</string>
+    <string name="game_title">ستاره‌چین</string>
+    <string name="tap_to_start">برای شروع ضربه بزن</string>
+    <string name="tap_to_restart">برای بازی دوباره ضربه بزن</string>
+    <string name="game_over">بازی تمام شد</string>
+    <string name="ready_best">رکورد: %1$s</string>
+    <string name="over_summary">امتیاز: %1$s   رکورد: %2$s</string>
+    <string name="hud_score">امتیاز %1$s</string>
+    <string name="hud_level">مرحله %1$s</string>
 </resources>

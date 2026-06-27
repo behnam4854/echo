@@ -1,11 +1,25 @@
-# Star Catcher 🌟
+# Star Catcher — «ستاره‌چین» 🌟
 
 A friendly arcade catch-and-dodge game for Android, made for kids **ages 7–13**.
+The in-game language is **Persian (Farsi), fully right-to-left**, including
+Persian digits.
 
 Slide the basket along the bottom of the screen with one finger. **Catch the
 falling stars and gems** to score, and **dodge the asteroids**. The longer you
 last, the faster things fall — easy to pick up for younger players, fast enough
 to challenge older ones.
+
+## Screenshots
+
+| Start | Gameplay | Game over |
+| --- | --- | --- |
+| ![start](docs/screenshots/01-start.png) | ![gameplay](docs/screenshots/02-gameplay.png) | ![game over](docs/screenshots/03-gameover.png) |
+
+> These are faithful design renders of the game's drawing code (the project
+> can't compile an APK in this environment, which has no Android SDK). They
+> mirror the exact colors, geometry, and Persian/RTL text the app draws.
+
+See **[ROADMAP.md](ROADMAP.md)** for the Agile, sprint-based development plan.
 
 ## Why this genre
 
