@@ -24,11 +24,20 @@ flat lanes, the whole battlefield is a globe you rotate.
 ## How it plays
 
 - **Drag the planet** → spins it, moving every turret around the globe.
-- **Tap empty space** → builds a turret on the surface facing that way (costs energy).
+- **Pick a turret type** (bottom-right): **Rapid** (cheap, fast, weak) or **Cannon** (costly, slow, strong, splash damage).
+- **Tap empty space** → builds the selected turret on the surface (costs energy).
 - **Turrets auto-fire** at the nearest slime-zombie in range.
+- **Save your Shockwave** (bottom-left): it charges as you kill, then clears the screen when you need it.
 - **Kills give energy**; energy builds more turrets.
 - A slime that reaches the planet damages it. **Planet health hits zero → game over.**
-- Waves get faster and tougher the longer you survive.
+- Waves get faster and tougher; a **boss** shows up every 5th wave.
+
+### Features (v0.2)
+
+- Two turret types (Rapid / Cannon with splash) + on-screen selector.
+- Four enemy kinds: Normal, Fast, Tank, and a periodic Boss.
+- Shockwave special ability with a charge meter.
+- Polished rendering: shaded/lit planet, glow, tracer shots, nebula background, vignette, screen shake, and a damage flash.
 
 ## Why this design fits ages 7–13
 
@@ -36,8 +45,9 @@ flat lanes, the whole battlefield is a globe you rotate.
 - Difficulty self-scales with waves — still tense for a 13-year-old.
 - Cute, non-violent slime enemies; no text-heavy menus, no ads, no network.
 
-See **[DESIGN.md](DESIGN.md)** for the full game design and **[ROADMAP.md](ROADMAP.md)**
-for the Agile, sprint-based development plan.
+See **[DESIGN.md](DESIGN.md)** for the full game design, and the Agile,
+sprint-based development plan in **[English](ROADMAP.en.md)** or
+**[Persian](ROADMAP.md)**.
 
 ## Tech
 
